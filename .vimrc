@@ -27,6 +27,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'user/L9', {'name': 'newL9'}
 "
 Plugin 'c.vim'
+"Plugin 'a.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
@@ -35,6 +36,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'brookhong/cscope.vim'
 Plugin 'bling/vim-airline'
+Plugin 'Sirver/ultisnips'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -101,3 +103,22 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "--for airline--"
 let g:airline#extensions#tabline#enabled = 1
 "--for airline--"
+"
+"--for YouCompleteme---"
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+"
+"--for YouCompleteme---"
+"
+"---for auto build darwin---"
+nnoremap <leader>bd :!./Buildit<CR>
+"---for auto build darwin---"
+"
+"---for ultisnips-------"
+" " Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+" " Trigger configuration. Do not use <tab> if you use  https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsEditSplit="vertical"
+"---for ultisnips-------"
