@@ -106,6 +106,8 @@ let g:airline#extensions#tabline#enabled = 1
 "
 "--for YouCompleteme---"
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 "
 "--for YouCompleteme---"
 "
@@ -117,7 +119,7 @@ nnoremap <leader>bd :!./Buildit<CR>
 " " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 " " Trigger configuration. Do not use <tab> if you use  https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-m>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " let g:UltiSnipsEditSplit="vertical"
