@@ -1,3 +1,12 @@
+" enable persistent-undo, vim version should be greater than 7.3
+let $VIMTEMP=$VIMTEMP.'/tmp'
+if v:version >= 703
+	set undofile
+	set undodir=$VIMTEMP
+	set undolevels=1000 "maximum number of changes that can be undo"
+	set undoreload=10000 "maximum number lines to save for undo on a buffer"
+endif
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -91,6 +100,8 @@ nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
 nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
 " " i: Find files #including this file
 nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+" " disable the message display for database updated
+let g:cscope_silent = 1
 "--for cscope.vim--"
 "
 "
